@@ -8,8 +8,14 @@ The project consists of cleaning data, data analysis and data modeling by using 
 
 
 **Structure of the project is as follows:**
-- ".gitignore" : Created to ignore raw and cleaned data from upload. They exceed 50 mb and are too large.
-- Folder 'data' will be empty on git due to abovementioned.
+- ".gitignore" : Created to ignore raw data from upload. They exceed 50 mb and are too large.
+
+_Folder "data":_
+- "cleaned_data.csv" : Outcome of data cleaning. File used for further analysis.
+- "companies_data.db" : File generated out of 'cleaned_data.csv' to ask SQL queries.
+
 
 _Folder "notebooks":_
 - "data_cleaning.py" : Python file created to read, clean and save new data file.
+- "data_exploration.py" : Python file used to run exploration of data. It covers the same queries as 'sql_queries.py' but with use of Pandas module.
+- "sql_queries.py" : Python file used to generate 'companies_data.db' and run exploratory queries by using SQL(sqlite3 module). It covers the same queries as 'data_exploration.py'.
